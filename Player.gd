@@ -1,5 +1,13 @@
 extends KinematicBody2D
 
+# TODO
+# Utiliser les skeletal deform pour animer le bras robot
+# Détecter la collision avec le bras robot -> restart
+# Détecter l'appui vers la touche haut pour lancer la téléportation
+# Animation à l'endroit ou le joueur est téléporté (halo bleu ?)
+# Détection collision pierre/bouton et animation bouton puis ouverture entrée
+# Entrée amène au niveau 2
+
 #signal hit
 #func _ready():
 #	$Area2D.connect("area_entered", self, "_on_Area_entered")
