@@ -14,14 +14,29 @@ var motion = Vector2()
 var on_ladder = false
 var contact = false
 
+var door
+var brasrobot
+var boutonrouge
+
+func _ready():
+	door = get_node("../Door/Sprite")
+	door.connect("animation_finished", self, "on_door_animation_finished")
+	brasrobot = get_node("../BrasRobot/Sprite")
+	brasrobot.play("Move")
+	boutonrouge = get_node("../BoutonRouge/Sprite")
+	boutonrouge.play("Push")
+
+func on_door_animation_finished():
+	contact = true
+
 func _physics_process(delta):
 
 	motion.y += GRAVITY
 	
-	print ("y :")
-	print (position.y)
-	print ("x :")
-	print (position.x)
+#	print ("y :")
+#	print (position.y)
+#	print ("x :")
+#	print (position.x)
 	
 	if Input.is_action_pressed("ui_right"):
 		motion.x = SPEED
@@ -44,10 +59,10 @@ func _physics_process(delta):
 	# LADDER
 	var tilemap = get_parent().get_node("TileMap2")
 	
-	if not tilemap == null:
+	if tilemap != null:
 		var map_pos = tilemap.world_to_map(position)
 		var id = tilemap.get_cellv(map_pos)
-		if id > -1:
+		if id != -1:
 			if tilemap.get_tileset().tile_get_name(id) == "ladder":
 				on_ladder = true
 				#left_tile = (TileMap2.get_cellv(TileMap2.world_to_map(pos)))
@@ -55,14 +70,15 @@ func _physics_process(delta):
 				on_ladder = false
 		else:
 			on_ladder = false
+			
 	if on_ladder == true:
 		if Input.is_action_pressed("ui_up"):
-			pass
-			if position.x >= 200:
-				position.x = 263
-				print (position.x)
-			else:
-				position.x = 200
+			#pass
+#			if position.x >= 200:
+#				position.x = 263
+#				print (position.x)
+#			else:
+#				position.x = 200
 			motion.y = -80
 			$Sprite.play("Climb")
 			
@@ -78,6 +94,13 @@ func _physics_process(delta):
 
 func _on_TEST_body_entered(body):
 	contact = true
+
+func _on_Door_body_entered(body):
+	door.play("Open")
+	#$Sprite.play("Open")
+	print(body.get_name())
+	#get_node("/root/Door").$Sprite.play("Open")
+	pass
 
 func _on_robot_body_entered(body):
 	get_tree().reload_current_scene()
