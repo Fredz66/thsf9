@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/The _wilight_Zone.ogg-10fe8b00c3245ba1b34b7270f0893331.oggstr"
+
+[deps]
+
+source_file="res://music/The _wilight_Zone.ogg"
+source_md5="7b1279dbb1156cee2d5fd5ad10165d15"
+
+dest_files=[ "res://.import/The _wilight_Zone.ogg-10fe8b00c3245ba1b34b7270f0893331.oggstr" ]
+dest_md5="81ff6e25fbe2fbac50ff1493e537e722"
+
+[params]
+
+loop=true
+loop_offset=0

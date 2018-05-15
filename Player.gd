@@ -1,16 +1,18 @@
 extends KinematicBody2D
 
 # TODO
-# Utiliser les skeletal deform pour animer le bras robot
-# Détecter la collision avec le bras robot -> restart
-# Détecter l'appui vers la touche haut pour lancer la téléportation
-# Animation à l'endroit ou le joueur est téléporté (halo bleu ?)
-# Détection collision pierre/bouton et animation bouton puis ouverture entrée
-# Entrée amène au niveau 2
+# Animation haut du corps dernier robot
+# Etat ouvert pour porte pour pouvoir passer quand on est tombé
 
-#signal hit
-#func _ready():
-#	$Area2D.connect("area_entered", self, "_on_Area_entered")
+# ABANDONNE
+# Ecran intermédiaire avant niveau 1 (Get Ready!)
+# Animation quand personnage meurt
+# Animation à l'endroit où le joueur est téléporté (halo bleu ?)
+
+# Niveau 2 logique avec lumières
+
+# FAIT
+# Fond de briques avec images
 
 const UP = Vector2(0, -1)
 
@@ -23,16 +25,12 @@ var on_ladder = false
 var contact = false
 
 var door
-var brasrobot
-var boutonrouge
+
+var ordinateur_allume = false
 
 func _ready():
 	door = get_node("../Door/Sprite")
 	door.connect("animation_finished", self, "on_door_animation_finished")
-	brasrobot = get_node("../BrasRobot/Sprite")
-	brasrobot.play("Move")
-	boutonrouge = get_node("../BoutonRouge/Sprite")
-	boutonrouge.play("Push")
 
 func on_door_animation_finished():
 	contact = true
@@ -40,6 +38,14 @@ func on_door_animation_finished():
 func _physics_process(delta):
 
 	motion.y += GRAVITY
+	
+	print("position: ", position.x, " ", position.y)
+	if !ordinateur_allume:
+		if position.x > 299 and position.y > 103 and position.y < 104:
+			ordinateur_allume = true
+			get_parent().get_node("TileMap2").set_cell(19,5,4)
+			get_parent().get_node("TileMap2").set_cell(9,7,-1)
+			get_parent().get_node("TileMap2").set_cell(9,6,9)
 	
 #	print ("y :")
 #	print (position.y)
@@ -105,10 +111,16 @@ func _on_TEST_body_entered(body):
 
 func _on_Door_body_entered(body):
 	door.play("Open")
-	#$Sprite.play("Open")
-	print(body.get_name())
-	#get_node("/root/Door").$Sprite.play("Open")
 	pass
 
 func _on_robot_body_entered(body):
 	get_tree().reload_current_scene()
+
+func _on_Bras_body_entered(body):
+	get_tree().reload_current_scene()
+
+func _on_BrasRouge_body_entered(body):
+	get_tree().reload_current_scene()
+
+func _on_Sortie_body_entered(body):
+	get_tree().change_scene("res://Level2.tscn")

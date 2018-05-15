@@ -1,0 +1,357 @@
+[gd_scene load_steps=44 format=2]
+
+[ext_resource path="res://TileSet3.tres" type="TileSet" id=1]
+[ext_resource path="res://Player.gd" type="Script" id=2]
+[ext_resource path="res://player/idle/000.png" type="Texture" id=3]
+[ext_resource path="res://player/idle/001.png" type="Texture" id=4]
+[ext_resource path="res://player/idle/002.png" type="Texture" id=5]
+[ext_resource path="res://player/idle/003.png" type="Texture" id=6]
+[ext_resource path="res://player/idle/004.png" type="Texture" id=7]
+[ext_resource path="res://player/run/000.png" type="Texture" id=8]
+[ext_resource path="res://player/run/001.png" type="Texture" id=9]
+[ext_resource path="res://player/run/002.png" type="Texture" id=10]
+[ext_resource path="res://player/run/003.png" type="Texture" id=11]
+[ext_resource path="res://player/run/004.png" type="Texture" id=12]
+[ext_resource path="res://player/run/005.png" type="Texture" id=13]
+[ext_resource path="res://player/run/006.png" type="Texture" id=14]
+[ext_resource path="res://player/run/007.png" type="Texture" id=15]
+[ext_resource path="res://player/run/008.png" type="Texture" id=16]
+[ext_resource path="res://player/run/009.png" type="Texture" id=17]
+[ext_resource path="res://player/climb/000.png" type="Texture" id=18]
+[ext_resource path="res://player/climb/001.png" type="Texture" id=19]
+[ext_resource path="res://icon.png" type="Texture" id=20]
+[ext_resource path="res://robot.gd" type="Script" id=21]
+[ext_resource path="res://robot/r001.png" type="Texture" id=22]
+[ext_resource path="res://robot/r002.png" type="Texture" id=23]
+[ext_resource path="res://robot/r003.png" type="Texture" id=24]
+[ext_resource path="res://robot/r004.png" type="Texture" id=25]
+[ext_resource path="res://robot/r005.png" type="Texture" id=26]
+[ext_resource path="res://robot/r006.png" type="Texture" id=27]
+[ext_resource path="res://robot/r007.png" type="Texture" id=28]
+[ext_resource path="res://robot/r008.png" type="Texture" id=29]
+[ext_resource path="res://Pierre.gd" type="Script" id=30]
+[ext_resource path="res://pierre/pierre.png" type="Texture" id=31]
+[ext_resource path="res://bouton/bouton-rouge.png" type="Texture" id=32]
+[ext_resource path="res://bouton/bouton-rouge-enfonce.png" type="Texture" id=33]
+[ext_resource path="res://backgrounds/whatyousee.png" type="Texture" id=34]
+
+[sub_resource type="RectangleShape2D" id=14]
+
+custom_solver_bias = 0.0
+extents = Vector2( 18.2426, 30.4266 )
+
+[sub_resource type="SpriteFrames" id=15]
+
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "Run",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "Climb",
+"speed": 8.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 12.9686, 13.3356 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32.1167, 30.7735 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 7.9976, 7.88628 )
+
+[sub_resource type="SpriteFrames" id=7]
+
+animations = [ {
+"frames": [ ExtResource( 22 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
+"loop": true,
+"name": "Run",
+"speed": 12.0
+} ]
+_sections_unfolded = [ "Resource" ]
+
+[sub_resource type="RectangleShape2D" id=11]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32.9127, 32.3241 )
+
+[sub_resource type="SpriteFrames" id=13]
+
+animations = [ {
+"frames": [ ExtResource( 32 ), ExtResource( 33 ) ],
+"loop": true,
+"name": "Push",
+"speed": 1.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=12]
+
+custom_solver_bias = 0.0
+extents = Vector2( 7.00729, 6.2376 )
+
+[node name="World" type="Node"]
+
+[node name="TileMap2" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65553, 10, 0, 131073, 10, 0, 131081, 2, 0, 131082, 2, 0, 131083, 2, 0, 131089, 10, 0, 131090, 2, 0, 131091, 2, 0, 196609, 10, 0, 196610, 2, 0, 196611, 2, 0, 196612, 2, 0, 196613, 2, 0, 196614, 2, 0, 196615, 2, 0, 196621, 2, 0, 196622, 2, 0, 196623, 2, 0, 196624, 2, 0, 196625, 10, 0, 262145, 10, 0, 262161, 10, 0, 327681, 10, 0, 327683, 10, 0, 327689, 10, 0, 327699, 10, 0, 393216, 2, 0, 393217, 2, 0, 393218, 2, 0, 393219, 10, 0, 393222, 2, 0, 393223, 2, 0, 393224, 2, 0, 393225, 10, 0, 393227, 4, 0, 393234, 2, 0, 393235, 10, 0, 458755, 10, 0, 458757, 10, 0, 458761, 10, 0, 458771, 10, 0, 524291, 10, 0, 524293, 10, 0, 524297, 10, 0, 524307, 10, 0, 589824, 2, 0, 589825, 2, 0, 589826, 2, 0, 589827, 2, 0, 589828, 2, 0, 589829, 10, 0, 589830, 2, 0, 589831, 2, 0, 589832, 2, 0, 589833, 2, 0, 589834, 2, 0, 589840, 10, 0, 589841, 2, 0, 589842, 2, 0, 655365, 10, 0, 655374, 2, 0, 655375, 2, 0, 655376, 10, 0, 720901, 10, 0, 720912, 10, 0, 786432, 1, 0, 786433, 1, 0, 786434, 1, 0, 786435, 1, 0, 786436, 1, 0, 786437, 1, 0, 786438, 1, 0, 786439, 1, 0, 786440, 1, 0, 786441, 1, 0, 786442, 1, 0, 786443, 1, 0, 786444, 1, 0, 786445, 1, 0, 786446, 1, 0, 786447, 1, 0, 786448, 1, 0, 786449, 1, 0, 786450, 1, 0, 786451, 1, 0 )
+_sections_unfolded = [ "Cell" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player" type="KinematicBody2D" parent="." index="1"]
+
+editor/display_folded = true
+position = Vector2( 75.0453, 180.644 )
+scale = Vector2( 0.189756, 0.2322 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 2 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "collision" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" index="0"]
+
+position = Vector2( 0.756379, 4.20369 )
+scale = Vector2( 1.26153, 1.12576 )
+shape = SubResource( 14 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Player" index="1"]
+
+position = Vector2( -29.6131, -39.063 )
+scale = Vector2( 5.26991, 4.30664 )
+z_index = 1
+frames = SubResource( 15 )
+animation = "Idle"
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="Godot" type="KinematicBody2D" parent="." index="2"]
+
+editor/display_folded = true
+visible = false
+position = Vector2( -56.4678, 88.4047 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Godot" index="0"]
+
+position = Vector2( 0.535808, 0.475181 )
+scale = Vector2( 2.50351, 2.4194 )
+shape = SubResource( 3 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Sprite" type="Sprite" parent="Godot" index="1"]
+
+texture = ExtResource( 20 )
+
+[node name="TEST" type="Area2D" parent="." index="3"]
+
+editor/display_folded = true
+visible = false
+position = Vector2( 24.1118, 35.6934 )
+scale = Vector2( 0.265252, 0.238997 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TEST" index="0"]
+
+texture = ExtResource( 20 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TEST" index="1"]
+
+position = Vector2( -3.77, 0 )
+shape = SubResource( 5 )
+
+[node name="Sortie" type="Area2D" parent="." index="4"]
+
+position = Vector2( 284.789, 32.1693 )
+input_pickable = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="robot" type="Area2D" parent="." index="5"]
+
+editor/display_folded = true
+position = Vector2( 13.4646, 182.294 )
+scale = Vector2( 0.276115, 0.283511 )
+input_pickable = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 21 )
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="robot" index="0"]
+
+position = Vector2( 2.50186, 3.88443 )
+scale = Vector2( 3.18822, 3.71752 )
+shape = SubResource( 6 )
+
+[node name="Sprite" type="AnimatedSprite" parent="robot" index="1"]
+
+position = Vector2( 5.26331, -4.26591 )
+scale = Vector2( 3.60832, 3.37934 )
+frames = SubResource( 7 )
+animation = "Run"
+
+[node name="Pierre" type="KinematicBody2D" parent="." index="6"]
+
+editor/display_folded = true
+position = Vector2( 143.022, 57.6075 )
+scale = Vector2( 0.215991, 0.182947 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 30 )
+_sections_unfolded = [ "Pickable" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Pierre" index="0"]
+
+position = Vector2( -29.0649, -35.9171 )
+scale = Vector2( 3.87634, 4.29221 )
+texture = ExtResource( 31 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pierre" index="1"]
+
+position = Vector2( 2.63318, -2.20084 )
+shape = SubResource( 11 )
+
+[node name="BoutonRouge" type="StaticBody2D" parent="." index="7"]
+
+editor/display_folded = true
+position = Vector2( 114.18, 94.5359 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="BoutonRouge" index="0"]
+
+position = Vector2( 22.9369, 27.5586 )
+scale = Vector2( 0.220961, 0.257504 )
+frames = SubResource( 13 )
+animation = "Push"
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoutonRouge" index="1"]
+
+visible = false
+position = Vector2( 22.9085, 27.6077 )
+shape = SubResource( 12 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="." index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 192.0
+margin_right = 320.0
+margin_bottom = 208.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "La Résidence"
+align = 1
+valign = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Size Flags", "custom_colors" ]
+
+[node name="RobotGris" type="KinematicBody2D" parent="." index="9"]
+
+position = Vector2( 200, 31.5 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+
+[node name="Node2D" type="Node2D" parent="." index="10"]
+
+editor/display_folded = true
+
+[node name="Sprite" type="Sprite" parent="Node2D" index="0"]
+
+position = Vector2( 219.769, 117.081 )
+z_index = -2
+texture = ExtResource( 34 )
+_sections_unfolded = [ "Z Index" ]
+
+[connection signal="body_entered" from="Sortie" to="Player" method="_on_Sortie_body_entered"]
+
+[connection signal="body_entered" from="robot" to="Player" method="_on_robot_body_entered"]
+
+

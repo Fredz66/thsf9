@@ -10,7 +10,7 @@ source_file="res://bouton/giant-button.png"
 source_md5="c7c0516a429c884e2ed186acff3dd32a"
 
 dest_files=[ "res://.import/giant-button.png-37efa528263a38314789145568791e1e.stex" ]
-dest_md5="a279e45c0974372c59377f2420ba9111"
+dest_md5="4ef0df2ba244b6b73284ead8d958ec20"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

@@ -1,46 +1,51 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=55 format=2]
 
-[ext_resource path="res://TileSet02.tres" type="TileSet" id=1]
-[ext_resource path="res://Player.gd" type="Script" id=2]
-[ext_resource path="res://player/idle/000.png" type="Texture" id=3]
-[ext_resource path="res://player/idle/001.png" type="Texture" id=4]
-[ext_resource path="res://player/idle/002.png" type="Texture" id=5]
-[ext_resource path="res://player/idle/003.png" type="Texture" id=6]
-[ext_resource path="res://player/idle/004.png" type="Texture" id=7]
-[ext_resource path="res://player/run/000.png" type="Texture" id=8]
-[ext_resource path="res://player/run/001.png" type="Texture" id=9]
-[ext_resource path="res://player/run/002.png" type="Texture" id=10]
-[ext_resource path="res://player/run/003.png" type="Texture" id=11]
-[ext_resource path="res://player/run/004.png" type="Texture" id=12]
-[ext_resource path="res://player/run/005.png" type="Texture" id=13]
-[ext_resource path="res://player/run/006.png" type="Texture" id=14]
-[ext_resource path="res://player/run/007.png" type="Texture" id=15]
-[ext_resource path="res://player/run/008.png" type="Texture" id=16]
-[ext_resource path="res://player/run/009.png" type="Texture" id=17]
-[ext_resource path="res://player/climb/000.png" type="Texture" id=18]
-[ext_resource path="res://player/climb/001.png" type="Texture" id=19]
-[ext_resource path="res://icon.png" type="Texture" id=20]
-[ext_resource path="res://porte-pixel3.png" type="Texture" id=21]
-[ext_resource path="res://robot.gd" type="Script" id=22]
-[ext_resource path="res://robot/r001.png" type="Texture" id=23]
-[ext_resource path="res://robot/r002.png" type="Texture" id=24]
-[ext_resource path="res://robot/r003.png" type="Texture" id=25]
-[ext_resource path="res://robot/r004.png" type="Texture" id=26]
-[ext_resource path="res://robot/r005.png" type="Texture" id=27]
-[ext_resource path="res://robot/r006.png" type="Texture" id=28]
-[ext_resource path="res://robot/r007.png" type="Texture" id=29]
-[ext_resource path="res://robot/r008.png" type="Texture" id=30]
-[ext_resource path="res://brasrobot/1.png" type="Texture" id=31]
-[ext_resource path="res://brasrobot/2.png" type="Texture" id=32]
-[ext_resource path="res://brasrobot/3.png" type="Texture" id=33]
+[ext_resource path="res://MurBrique.tres" type="TileSet" id=1]
+[ext_resource path="res://backgrounds/whatyousee.png" type="Texture" id=2]
+[ext_resource path="res://backgrounds/crypto-challenge-small.png" type="Texture" id=3]
+[ext_resource path="res://TileSet3.tres" type="TileSet" id=4]
+[ext_resource path="res://Player.gd" type="Script" id=5]
+[ext_resource path="res://player/idle/000.png" type="Texture" id=6]
+[ext_resource path="res://player/idle/001.png" type="Texture" id=7]
+[ext_resource path="res://player/idle/002.png" type="Texture" id=8]
+[ext_resource path="res://player/idle/003.png" type="Texture" id=9]
+[ext_resource path="res://player/idle/004.png" type="Texture" id=10]
+[ext_resource path="res://player/run/000.png" type="Texture" id=11]
+[ext_resource path="res://player/run/001.png" type="Texture" id=12]
+[ext_resource path="res://player/run/002.png" type="Texture" id=13]
+[ext_resource path="res://player/run/003.png" type="Texture" id=14]
+[ext_resource path="res://player/run/004.png" type="Texture" id=15]
+[ext_resource path="res://player/run/005.png" type="Texture" id=16]
+[ext_resource path="res://player/run/006.png" type="Texture" id=17]
+[ext_resource path="res://player/run/007.png" type="Texture" id=18]
+[ext_resource path="res://player/run/008.png" type="Texture" id=19]
+[ext_resource path="res://player/run/009.png" type="Texture" id=20]
+[ext_resource path="res://player/climb/000.png" type="Texture" id=21]
+[ext_resource path="res://player/climb/001.png" type="Texture" id=22]
+[ext_resource path="res://icon.png" type="Texture" id=23]
+[ext_resource path="res://sortie/sortie.png" type="Texture" id=24]
+[ext_resource path="res://robot.gd" type="Script" id=25]
+[ext_resource path="res://robot/r001.png" type="Texture" id=26]
+[ext_resource path="res://robot/r002.png" type="Texture" id=27]
+[ext_resource path="res://robot/r003.png" type="Texture" id=28]
+[ext_resource path="res://robot/r004.png" type="Texture" id=29]
+[ext_resource path="res://robot/r005.png" type="Texture" id=30]
+[ext_resource path="res://robot/r006.png" type="Texture" id=31]
+[ext_resource path="res://robot/r007.png" type="Texture" id=32]
+[ext_resource path="res://robot/r008.png" type="Texture" id=33]
 [ext_resource path="res://door/object_door_horizontal_1.png" type="Texture" id=34]
 [ext_resource path="res://door/object_door_horizontal_2.png" type="Texture" id=35]
 [ext_resource path="res://door/object_door_horizontal_3.png" type="Texture" id=36]
 [ext_resource path="res://door/object_door_horizontal_4.png" type="Texture" id=37]
-[ext_resource path="res://Pierre.gd" type="Script" id=38]
-[ext_resource path="res://pierre/pierre.png" type="Texture" id=39]
-[ext_resource path="res://bouton/bouton-rouge.png" type="Texture" id=40]
-[ext_resource path="res://bouton/bouton-rouge-enfonce.png" type="Texture" id=41]
+[ext_resource path="res://robotrouge/corps.png" type="Texture" id=38]
+[ext_resource path="res://BrasRougeArea.gd" type="Script" id=39]
+[ext_resource path="res://robotrouge/bras.png" type="Texture" id=40]
+[ext_resource path="res://robotgris/robot.png" type="Texture" id=41]
+[ext_resource path="res://robotgris/jambe.png" type="Texture" id=42]
+[ext_resource path="res://brasrobot/pied.png" type="Texture" id=43]
+[ext_resource path="res://Bras.gd" type="Script" id=44]
+[ext_resource path="res://brasrobot/bras.png" type="Texture" id=45]
+[ext_resource path="res://music/scene01AUG.ogg" type="AudioStream" id=46]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -50,17 +55,17 @@ extents = Vector2( 18.2426, 30.4266 )
 [sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
 "loop": true,
 "name": "Run",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 18 ), ExtResource( 19 ) ],
+"frames": [ ExtResource( 21 ), ExtResource( 22 ) ],
 "loop": true,
 "name": "Climb",
 "speed": 8.0
@@ -69,38 +74,29 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
-extents = Vector2( 12.9686, 13.3356 )
+extents = Vector2( 32.1167, 30.7735 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 19.279, 9.15802 )
 
 [sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32.1167, 30.7735 )
-
-[sub_resource type="RectangleShape2D" id=6]
-
-custom_solver_bias = 0.0
 extents = Vector2( 7.9976, 7.88628 )
 
-[sub_resource type="SpriteFrames" id=7]
+[sub_resource type="SpriteFrames" id=6]
 
 animations = [ {
-"frames": [ ExtResource( 23 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ],
+"frames": [ ExtResource( 26 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ) ],
 "loop": true,
 "name": "Run",
 "speed": 12.0
 } ]
 _sections_unfolded = [ "Resource" ]
 
-[sub_resource type="SpriteFrames" id=8]
-
-animations = [ {
-"frames": [ ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 31 ) ],
-"loop": true,
-"name": "Move",
-"speed": 1.0
-} ]
-
-[sub_resource type="SpriteFrames" id=9]
+[sub_resource type="SpriteFrames" id=7]
 
 animations = [ {
 "frames": [ ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ) ],
@@ -109,33 +105,14 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
 extents = Vector2( 15.7129, 10 )
 
-[sub_resource type="RectangleShape2D" id=11]
-
-custom_solver_bias = 0.0
-extents = Vector2( 32.9127, 32.3241 )
-
-[sub_resource type="SpriteFrames" id=13]
-
-animations = [ {
-"frames": [ ExtResource( 40 ), ExtResource( 41 ) ],
-"loop": true,
-"name": "Push",
-"speed": 1.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=12]
-
-custom_solver_bias = 0.0
-extents = Vector2( 7.00729, 6.2376 )
-
 [node name="World" type="Node" index="0"]
 
-[node name="TileMap2" type="TileMap" parent="." index="0"]
+[node name="MurFond" type="TileMap" parent="." index="0"]
 
 mode = 0
 tile_set = ExtResource( 1 )
@@ -153,21 +130,55 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 262144, 2, 0, 262145, 4, 0, 262146, 2, 0, 262153, 2, 0, 262154, 2, 0, 262155, 2, 0, 262156, 2, 0, 262157, 2, 0, 262158, 2, 0, 262159, 2, 0, 262160, 2, 0, 262161, 2, 0, 262162, 2, 0, 262163, 2, 0, 327681, 4, 0, 393217, 4, 0, 458753, 4, 0, 458768, 4, 0, 524288, 2, 0, 524289, 2, 0, 524290, 2, 0, 524291, 2, 0, 524292, 2, 0, 524293, 2, 0, 524294, 2, 0, 524295, 2, 0, 524296, 2, 0, 524297, 2, 0, 524298, 2, 0, 524299, 2, 0, 524300, 2, 0, 524301, 2, 0, 524302, 2, 0, 524303, 2, 0, 524304, 4, 0, 589840, 4, 0, 655376, 4, 0, 720912, 4, 0, 786432, 1, 0, 786433, 1, 0, 786434, 1, 0, 786435, 1, 0, 786436, 1, 0, 786437, 1, 0, 786438, 1, 0, 786439, 1, 0, 786440, 1, 0, 786441, 1, 0, 786443, 1, 0, 786444, 1, 0, 786445, 1, 0, 786446, 1, 0, 786447, 1, 0, 786448, 1, 0, 786449, 1, 0, 786450, 1, 0, 786451, 1, 0, 851978, 1, 0 )
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 65552, 0, 0, 65553, 0, 0, 65554, 0, 0, 65555, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 131088, 0, 0, 131089, 0, 0, 131090, 0, 0, 131091, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 196624, 0, 0, 196625, 0, 0, 196626, 0, 0, 196627, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 262160, 0, 0, 262161, 0, 0, 262162, 0, 0, 262163, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 327696, 0, 0, 327697, 0, 0, 327698, 0, 0, 327699, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 393232, 0, 0, 393233, 0, 0, 393234, 0, 0, 393235, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 458768, 0, 0, 458769, 0, 0, 458770, 0, 0, 458771, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 524305, 0, 0, 524306, 0, 0, 524307, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0, 589840, 0, 0, 589841, 0, 0, 589842, 0, 0, 589843, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0, 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0, 655378, 0, 0, 655379, 0, 0, 720896, 0, 0, 720897, 0, 0, 720898, 0, 0, 720899, 0, 0, 720900, 0, 0, 720901, 0, 0, 720902, 0, 0, 720903, 0, 0, 720904, 0, 0, 720905, 0, 0, 720906, 0, 0, 720907, 0, 0, 720908, 0, 0, 720909, 0, 0, 720910, 0, 0, 720911, 0, 0, 720912, 0, 0, 720913, 0, 0, 720914, 0, 0, 720915, 0, 0, 786442, 0, 0 )
 _sections_unfolded = [ "Cell" ]
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Player" type="KinematicBody2D" parent="." index="1"]
+[node name="Banderole" type="Sprite" parent="." index="1"]
 
-position = Vector2( 75.0453, 180.644 )
+position = Vector2( 157.419, 159.892 )
+texture = ExtResource( 2 )
+
+[node name="CryptoChallenge" type="Sprite" parent="." index="2"]
+
+position = Vector2( 131.598, 33.8898 )
+texture = ExtResource( 3 )
+
+[node name="TileMap2" type="TileMap" parent="." index="3"]
+
+mode = 0
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 262146, 2, 0, 262147, 10, 0, 262148, 2, 0, 262153, 6, 0, 262154, 2, 0, 262155, 2, 0, 262156, 2, 0, 262157, 2, 0, 262158, 2, 0, 262159, 2, 0, 262160, 2, 0, 262161, 2, 0, 262162, 2, 0, 262163, 2, 0, 327683, 10, 0, 327689, 7, 0, 327699, 11, 0, 393219, 10, 0, 393225, 7, 0, 393232, 10, 0, 393235, 5, 0, 458755, 10, 0, 458761, 8, 0, 458768, 10, 0, 458769, 2, 0, 458770, 2, 0, 458771, 2, 0, 524288, 2, 0, 524289, 2, 0, 524290, 2, 0, 524291, 2, 0, 524292, 2, 0, 524293, 2, 0, 524294, 2, 0, 524295, 2, 0, 524296, 2, 0, 524297, 2, 0, 524298, 2, 0, 524299, 2, 0, 524300, 2, 0, 524301, 2, 0, 524302, 2, 0, 524303, 2, 0, 524304, 10, 0, 589840, 10, 0, 655376, 10, 0, 720912, 10, 0, 786432, 1, 0, 786433, 1, 0, 786434, 1, 0, 786435, 1, 0, 786436, 1, 0, 786437, 1, 0, 786438, 1, 0, 786439, 1, 0, 786440, 1, 0, 786441, 1, 0, 786443, 1, 0, 786444, 1, 0, 786445, 1, 0, 786446, 1, 0, 786447, 1, 0, 786448, 1, 0, 786449, 1, 0, 786450, 1, 0, 786451, 1, 0, 851978, 1, 0 )
+_sections_unfolded = [ "Cell", "Collision", "Occluder" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player" type="KinematicBody2D" parent="." index="4"]
+
+position = Vector2( 72.1043, 182.982 )
 scale = Vector2( 0.189756, 0.2322 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
-script = ExtResource( 2 )
+script = ExtResource( 5 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform", "collision" ]
 __meta__ = {
 "_edit_group_": true
@@ -189,31 +200,7 @@ animation = "Idle"
 centered = false
 _sections_unfolded = [ "Offset", "Z Index" ]
 
-[node name="Godot" type="KinematicBody2D" parent="." index="2"]
-
-editor/display_folded = true
-visible = false
-position = Vector2( -56.4678, 88.4047 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-collision/safe_margin = 0.08
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Godot" index="0"]
-
-position = Vector2( 0.535808, 0.475181 )
-scale = Vector2( 2.50351, 2.4194 )
-shape = SubResource( 3 )
-_sections_unfolded = [ "Transform", "Visibility" ]
-
-[node name="Sprite" type="Sprite" parent="Godot" index="1"]
-
-texture = ExtResource( 20 )
-
-[node name="TEST" type="Area2D" parent="." index="3"]
+[node name="TEST" type="Area2D" parent="." index="5"]
 
 editor/display_folded = true
 visible = false
@@ -232,32 +219,37 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="TEST" index="0"]
 
-texture = ExtResource( 20 )
+texture = ExtResource( 23 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TEST" index="1"]
 
 position = Vector2( -3.77, 0 )
-shape = SubResource( 5 )
+shape = SubResource( 3 )
 
-[node name="porte" type="KinematicBody2D" parent="." index="4"]
+[node name="Sortie" type="Area2D" parent="." index="6"]
 
-editor/display_folded = true
-position = Vector2( 274.817, 29.3992 )
+position = Vector2( 284.789, 37.5579 )
 input_pickable = false
-collision_layer = 1
-collision_mask = 1
-collision/safe_margin = 0.08
-__meta__ = {
-"_edit_group_": true
-}
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="Sprite" type="Sprite" parent="porte" index="0"]
+[node name="Sprite" type="Sprite" parent="Sortie" index="0"]
 
-position = Vector2( 1.39014, 1.7701 )
-scale = Vector2( 0.142767, 0.199433 )
-texture = ExtResource( 21 )
+position = Vector2( 22.9747, 17.5915 )
+scale = Vector2( 0.674816, 0.543717 )
+texture = ExtResource( 24 )
 
-[node name="robot" type="Area2D" parent="." index="5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sortie" index="1"]
+
+position = Vector2( 22.1832, 17.1515 )
+scale = Vector2( 0.599885, 1 )
+shape = SubResource( 4 )
+
+[node name="robot" type="Area2D" parent="." index="7"]
 
 editor/display_folded = true
 position = Vector2( 13.4646, 182.294 )
@@ -269,39 +261,26 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 22 )
+script = ExtResource( 25 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="robot" index="0"]
 
 position = Vector2( 2.50186, 3.88443 )
 scale = Vector2( 3.18822, 3.71752 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="Sprite" type="AnimatedSprite" parent="robot" index="1"]
 
-position = Vector2( 6.38227, -1.31738 )
+position = Vector2( 5.26331, -4.26591 )
 scale = Vector2( 3.60832, 3.37934 )
-frames = SubResource( 7 )
+frames = SubResource( 6 )
 animation = "Run"
 
-[node name="BrasRobot" type="KinematicBody2D" parent="." index="6"]
-
-position = Vector2( 58.1718, 16.6205 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-collision/safe_margin = 0.08
-
-[node name="Sprite" type="AnimatedSprite" parent="BrasRobot" index="0"]
-
-position = Vector2( 233.401, 151.727 )
-frames = SubResource( 8 )
-animation = "Move"
-
-[node name="Door" type="Area2D" parent="." index="7"]
+[node name="Door" type="Area2D" parent="." index="8"]
 
 editor/display_folded = true
+position = Vector2( 54.5212, 32.4725 )
 input_pickable = false
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -312,74 +291,155 @@ audio_bus_name = "Master"
 
 [node name="Sprite" type="AnimatedSprite" parent="Door" index="0"]
 
-position = Vector2( 21.2088, 51.8938 )
+position = Vector2( -0.980457, 19.7072 )
 scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 9 )
+frames = SubResource( 7 )
 animation = "Open"
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door" index="1"]
 
-position = Vector2( 20.7861, 53.613 )
-shape = SubResource( 10 )
+position = Vector2( -1.40314, 21.4264 )
+shape = SubResource( 8 )
 
-[node name="Pierre" type="KinematicBody2D" parent="." index="8"]
+[node name="RobotRouge" type="Area2D" parent="." index="9"]
 
-position = Vector2( 143.022, 57.6075 )
-scale = Vector2( 0.215991, 0.182947 )
+position = Vector2( 24.2497, 102.039 )
+input_pickable = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Sprite" type="Sprite" parent="RobotRouge" index="0"]
+
+texture = ExtResource( 38 )
+
+[node name="BrasRougeArea" type="Area2D" parent="RobotRouge" index="1"]
+
+position = Vector2( -0.299368, 0 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 39 )
+
+[node name="Sprite" type="Sprite" parent="RobotRouge/BrasRougeArea" index="0"]
+
+position = Vector2( -0.00775146, -23.8098 )
+texture = ExtResource( 40 )
+offset = Vector2( 0.00775146, 23.8098 )
+
+[node name="BrasRouge" type="Area2D" parent="RobotRouge/BrasRougeArea/Sprite" index="0"]
+
+position = Vector2( 0.00775146, 23.8098 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RobotRouge/BrasRougeArea/Sprite/BrasRouge" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 16.439, 2.93876, 23.8546, 3.09653, 22.9079, -0.847946, 18.4901, -1.00573, 7.7611, -8.10579, 1.44993, -24.8304, -0.285643, -22.937, 5.55219, -6.528, 17.5434, 0.414284 )
+
+[node name="RobotGris" type="KinematicBody2D" parent="." index="10"]
+
+position = Vector2( 200, 31.5 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
-script = ExtResource( 38 )
-_sections_unfolded = [ "Pickable" ]
-__meta__ = {
-"_edit_group_": true
-}
 
-[node name="Sprite" type="Sprite" parent="Pierre" index="0"]
+[node name="Sprite" type="Sprite" parent="RobotGris" index="0"]
 
-position = Vector2( -29.0649, -35.9171 )
-scale = Vector2( 3.87634, 4.29221 )
-texture = ExtResource( 39 )
-centered = false
-_sections_unfolded = [ "Offset" ]
+position = Vector2( 12.6796, 10.2412 )
+texture = ExtResource( 41 )
+_sections_unfolded = [ "Offset", "Z Index" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pierre" index="1"]
+[node name="Sprite2" type="Sprite" parent="RobotGris" index="1"]
 
-position = Vector2( 2.63318, -2.20084 )
-shape = SubResource( 11 )
+position = Vector2( 12.6796, 10.2412 )
+z_index = 2
+texture = ExtResource( 42 )
+_sections_unfolded = [ "Z Index" ]
 
-[node name="BoutonRouge" type="StaticBody2D" parent="." index="9"]
+[node name="RobotBras" type="Area2D" parent="." index="11"]
 
-position = Vector2( 114.18, 94.5359 )
+position = Vector2( 288.193, 167.919 )
 input_pickable = true
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="Sprite" type="AnimatedSprite" parent="BoutonRouge" index="0"]
+[node name="Sprite" type="Sprite" parent="RobotBras" index="0"]
 
-position = Vector2( 22.9369, 27.5586 )
-scale = Vector2( 0.220961, 0.257504 )
-frames = SubResource( 13 )
-animation = "Push"
+texture = ExtResource( 43 )
+
+[node name="BrasArea" type="Area2D" parent="RobotBras" index="1"]
+
+input_pickable = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 44 )
+
+[node name="Sprite" type="Sprite" parent="RobotBras/BrasArea" index="0"]
+
+position = Vector2( 15.7415, 3.34244 )
+rotation = -0.349066
+texture = ExtResource( 45 )
+offset = Vector2( -15.1034, -1.60488 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BoutonRouge" index="1"]
+[node name="Bras" type="Area2D" parent="RobotBras/BrasArea/Sprite" index="0"]
 
-visible = false
-position = Vector2( 22.9085, 27.6077 )
-shape = SubResource( 12 )
-_sections_unfolded = [ "Transform" ]
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[connection signal="body_entered" from="TEST" to="Player" method="_on_TEST_body_entered"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RobotBras/BrasArea/Sprite/Bras" index="0"]
+
+position = Vector2( -13.8009, -8.58008 )
+rotation = 0.349066
+build_mode = 0
+polygon = PoolVector2Array( -29.0009, 2.66977, -14.1183, -3.80092, -18.9713, 2.02271, -16.5448, 8.16985, -2.95636, 0.566788, -8.45642, -12.8599, -22.2066, -8.97748, -31.2656, -1.69795 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="12"]
+
+stream = ExtResource( 46 )
+volume_db = 10.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[connection signal="body_entered" from="Sortie" to="Player" method="_on_Sortie_body_entered"]
 
 [connection signal="body_entered" from="robot" to="Player" method="_on_robot_body_entered"]
 
 [connection signal="body_entered" from="Door" to="Player" method="_on_Door_body_entered"]
+
+[connection signal="body_entered" from="RobotRouge/BrasRougeArea/Sprite/BrasRouge" to="Player" method="_on_BrasRouge_body_entered"]
+
+[connection signal="body_entered" from="RobotBras/BrasArea/Sprite/Bras" to="Player" method="_on_Bras_body_entered"]
 
 

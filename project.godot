@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="THSF9"
-run/main_scene="res://scene1.tscn"
+run/main_scene="res://Titre.tscn"
 config/icon="res://icon.png"
 
 [display]

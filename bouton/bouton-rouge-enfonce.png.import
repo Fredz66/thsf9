@@ -10,7 +10,7 @@ source_file="res://bouton/bouton-rouge-enfonce.png"
 source_md5="77b8a52cfad382e4b709310509dfa03c"
 
 dest_files=[ "res://.import/bouton-rouge-enfonce.png-1342985b185ce038fc2c3c97818dd3a0.stex" ]
-dest_md5="d4cac485b166e2bd33140f6fdd40cf62"
+dest_md5="4971f22c17f0bb1482319dcb88a2c0cf"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

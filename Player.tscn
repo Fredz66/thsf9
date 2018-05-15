@@ -1,0 +1,77 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://player/idle/000.png" type="Texture" id=2]
+[ext_resource path="res://player/idle/001.png" type="Texture" id=3]
+[ext_resource path="res://player/idle/002.png" type="Texture" id=4]
+[ext_resource path="res://player/idle/003.png" type="Texture" id=5]
+[ext_resource path="res://player/idle/004.png" type="Texture" id=6]
+[ext_resource path="res://player/run/000.png" type="Texture" id=7]
+[ext_resource path="res://player/run/001.png" type="Texture" id=8]
+[ext_resource path="res://player/run/002.png" type="Texture" id=9]
+[ext_resource path="res://player/run/003.png" type="Texture" id=10]
+[ext_resource path="res://player/run/004.png" type="Texture" id=11]
+[ext_resource path="res://player/run/005.png" type="Texture" id=12]
+[ext_resource path="res://player/run/006.png" type="Texture" id=13]
+[ext_resource path="res://player/run/007.png" type="Texture" id=14]
+[ext_resource path="res://player/run/008.png" type="Texture" id=15]
+[ext_resource path="res://player/run/009.png" type="Texture" id=16]
+[ext_resource path="res://player/climb/000.png" type="Texture" id=17]
+[ext_resource path="res://player/climb/001.png" type="Texture" id=18]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 18.2426, 30.4266 )
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "Run",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "Climb",
+"speed": 8.0
+} ]
+
+[node name="Player" type="KinematicBody2D"]
+
+editor/display_folded = true
+position = Vector2( 75.0453, 180.644 )
+scale = Vector2( 0.189756, 0.2322 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "collision" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+position = Vector2( 0.756379, 4.20369 )
+scale = Vector2( 1.26153, 1.12576 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="AnimatedSprite" parent="." index="1"]
+
+position = Vector2( -29.6131, -39.063 )
+scale = Vector2( 5.26991, 4.30664 )
+z_index = 1
+frames = SubResource( 2 )
+animation = "Idle"
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+
